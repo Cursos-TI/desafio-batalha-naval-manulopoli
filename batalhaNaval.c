@@ -31,11 +31,11 @@ int posicaoLivre(int tabuleiro[10][10], int x, int y, int direcao) {
     for (int i = 0; i < 3; i++) {
         int novoX = x, novoY = y;
 
-        // Se o navio for horizontal
+        // Navio horizontal
         if (direcao == 0) {
             novoY += i;
         }
-        // Se o navio for vertical
+        // Navio vertical
         else if (direcao == 1) {
             novoX += i;
         }
@@ -69,17 +69,17 @@ void posicionarNavio(int tabuleiro[10][10], int x, int y, int direcao) {
 
 int main() {
     int tabuleiro[10][10];
-    // Inicializar o tabuleiro
+    // Inicializando o tabuleiro
     iniciarTabuleiro(tabuleiro);
 
     // Definindo as coordenadas dos navios
-    // Primeiro navio (horizontal)
+    // Primeiro navio (Horizontal)
     int x1 = 6, y1 = 3, direcao1 = 0; // x1, y1 são as coordenadas de início, direcao1 = 0 (horizontal)
     if (posicaoLivre(tabuleiro, x1, y1, direcao1)) {
         posicionarNavio(tabuleiro, x1, y1, direcao1);
     }
 
-    // Segundo navio (vertical)
+    // Segundo navio (Vertical)
     int x2 = 2, y2 = 3, direcao2 = 1; // x2, y2 são as coordenadas de início, direcao2 = 1 (vertical)
     if (posicaoLivre(tabuleiro, x2, y2, direcao2)) {
         posicionarNavio(tabuleiro, x2, y2, direcao2);
